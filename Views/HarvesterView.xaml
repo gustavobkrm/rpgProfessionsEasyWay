@@ -1,0 +1,45 @@
+﻿<Window x:Class="rpgProfessionsEasyWay.Views.HarvesterView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:rpgProfessionsEasyWay.Views"
+        mc:Ignorable="d"
+        Title="HarvesterView" Height="450" Width="800">
+    <Grid>
+        <Button  x:Name="buttonVoltar" HorizontalAlignment="Left" Margin="20,387,0,0" VerticalAlignment="Top" Click="Button_Click">
+            <StackPanel>
+                <Image/>
+                <TextBlock Background="White" Width="54" TextAlignment="Center" FontFamily="Calibri" FontSize="16"><Run Text="Back"/></TextBlock>
+            </StackPanel>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <RadioButton x:Name="tropical" Content="Tropical Climate" FontFamily="Calibri" FontSize="16" HorizontalAlignment="Left" Margin="37,172,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="medit" Content="Mediterranean Climate" FontFamily="Calibri" FontSize="16" HorizontalAlignment="Left" Margin="37,137,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="temperate" Content="Temperate Climate" FontFamily="Calibri" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,72,0,0"/>
+        <RadioButton x:Name="special" Content="Special Climate" FontFamily="Calibri" FontSize="16"  HorizontalAlignment="Left" Margin="37,105,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="inputNumbers" HorizontalAlignment="Left" Margin="37,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" TextChanged="TextBox_TextChanged" Height="24" FontFamily="Calibri" FontSize="18"/>
+        <Button x:Name="buttonSubmit" HorizontalAlignment="Left" Margin="83,280,0,0" VerticalAlignment="Top" Height="24" Width="71" Background="Black" Click="buttonSubmit_Click">
+            <StackPanel>
+                <Image/>
+                <TextBlock Width="54" TextAlignment="Center" FontFamily="Calibri" FontSize="16" Foreground="White"><Run Text="Submit"/></TextBlock>
+            </StackPanel>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="412,62,83,134" FontFamily="Calibri" FontSize="20">
+            <StackPanel x:Name="tablePanel"/>
+        </ScrollViewer>
+        <Label x:Name="alertError" Content="Please, select one Climate" HorizontalAlignment="Left" Margin="0,4,0,0" VerticalAlignment="Top" Height="25" Width="879" RenderTransformOrigin="0.5,0.5" Background="#FFAD1717" FontFamily="Bahnschrift Light" FontSize="16" Foreground="White" Visibility="Hidden">
+
+        </Label>
+        <Label Content="dices example: 1,2,5,20,10" HorizontalAlignment="Left" Margin="49,225,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

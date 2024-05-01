@@ -138,8 +138,8 @@ namespace rpgProfessionsEasyWay.Views
             string[] numbers = formatedNumbers.Split(',');
 
             int[] intNumbers = numbers
-                .Where(s => int.TryParse(s, out _)) // Filtrar apenas os elementos que podem ser convertidos em inteiros
-                .Select(int.Parse) // Converter os elementos filtrados em inteiros
+                .Where(s => int.TryParse(s, out _))
+                .Select(int.Parse) 
                 .ToArray();
 
             List<string> listaItens = new List<string>();
